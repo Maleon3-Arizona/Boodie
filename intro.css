@@ -1,0 +1,94 @@
+body {
+    background: linear-gradient(135deg, #ff6f61 0%, #ff9a9e 100%);
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Heart-shaped confetti animation */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('assets/heart-confetti.jpg') repeat; /* Updated path */
+    animation: confetti 10s linear infinite;
+    opacity: 0.5;
+    z-index: 1;
+}
+
+@keyframes confetti {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(100%); }
+}
+
+.container {
+    max-width: 600px;
+    width: 100%;
+    padding: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.valentine-box {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    color: #ff6f61;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.button {
+    background: #ff6f61;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.button:hover {
+    background: #ff4a4a;
+    transform: translateY(-2px);
+}
+
+.gif {
+    width: 150px;
+    margin: 20px 0;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+
